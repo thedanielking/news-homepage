@@ -1,0 +1,315 @@
+:root{
+    --clr--secondary--100: hsl(35, 77%, 62%);
+    --clr--secondary--200: hsl(5, 85%, 63%);
+    --clr--neutral--100: hsl(36, 100%, 99%);
+    --clr--neutral--200: hsl(233, 8%, 79%);
+    --clr--dark--100: hsl(236, 13%, 42%);
+    --clr--dark--200: hsl(240, 100%, 5%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+img, svg, video, canvas, picture{
+    max-width: 100%;
+    display: block;
+}
+
+p{
+    line-height: 1.7;
+}
+
+
+body{
+    color: var(--clr--dark--100);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    /* justify-content: center; */
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+/* header section */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+header img{
+    width: 40px;
+}
+
+header #menuBtn{
+    display: none;
+}
+
+header nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+header nav ul img{
+    display: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--clr--dark--200);
+}
+
+header nav ul li a:hover{
+    color: var(--clr--secondary--200);
+}
+
+
+/* main section */
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.headerTab{
+    grid-column: 2 span;
+    grid-row: 1 span;
+}
+
+.headerTab .contentTab{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.headerTab .contentTab h1{
+    font-size: 3rem;
+    width: 270px;
+    color: var(--clr--dark--200);
+}
+
+.headerTab .contentTab div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+
+/* .headerTab .contentTab div p{
+    font-weight: 200;
+} */
+
+.headerTab .contentTab div button{
+    width: 170px;
+    padding: .75rem 1rem;
+    background: var(--clr--secondary--200);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.headerTab .contentTab div button:hover{
+    background-color: var(--clr--dark--200);
+    cursor: pointer;
+    color: var(--clr--neutral--200);
+    transition: all .3s ease;
+}
+
+.newsTab{
+    grid-column: 3;
+    grid-row: 1 span;
+    background-color: var(--clr--dark--200);
+    /* height: 370px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.newsTab h2{
+    font-size: 2rem;
+    color: var(--clr--secondary--100);
+}
+
+.newsTab div{
+    color: var(--clr--neutral--100);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsTab div::after{
+    content: "";
+    margin-top: -10px;
+    border: 1px solid var(--clr--neutral--200);
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.newsTab div:last-of-type::after{
+    display: none;
+}
+
+.newsTab div h3:hover{
+    color: var(--clr--secondary--100);
+    cursor: pointer;
+}
+
+
+.newsTab div p{
+    margin-bottom: 20px;
+    color: var(--clr--neutral--200);
+}
+
+
+.listTab{
+    grid-column: 3 span;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listTab > div{
+    display: flex;
+    gap: 1rem;
+    height: 100px;
+}
+
+.listTab div h2{
+    color: var(--clr--secondary--200);
+}
+
+.listTab div h3{
+    color: var(--clr--dark--200);
+}
+
+.listTab div h3:hover{
+    color: var(--clr--secondary--200);
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    body{
+        /* font-size: 12px; */
+    }
+
+    .container{
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    header #menuBtn{
+        display: block;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .headerTab img{
+        content: url(./assets/images/image-web-3-mobile.jpg);
+        /* changes the img src */
+    }
+
+    .headerTab .contentTab h1{
+        font-size: 2.5rem;
+    }
+
+    .contentTab{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .headerTab .contentTab h1{
+        width: 100%;
+    }
+
+    .headerTab .contentTab div{
+        gap: 5px;
+        width: 100%;
+    }
+    
+    .listTab{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .listTab > div > img{
+        width: 100px;
+    }
+
+    .listTab > div{
+        display: flex;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    .menuTab{
+        display: block;
+    }
+
+    .menuTab ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background: var(--clr--neutral--100);
+        width: 50%;
+        top: 0;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .menuTab ul img{
+        display: block;
+        width: 30px;
+        position: relative;
+        right: -90%;
+        top: 15px;
+        margin-bottom: 4rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
