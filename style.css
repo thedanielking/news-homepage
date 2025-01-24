@@ -29,6 +29,8 @@ p{
 
 
 body{
+    font-family: "Inter", serif;
+    font-style: normal;
     color: var(--clr--dark--100);
     font-size: 15px;
     display: flex;
