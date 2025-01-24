@@ -37,6 +37,7 @@ body{
     align-items: center;
     width: 100%;
     min-height: 100vh;
+    background: var(--clr--neutral--100);
     /* justify-content: center; */
 }
 
@@ -106,6 +107,7 @@ main{
     font-size: 3rem;
     width: 270px;
     color: var(--clr--dark--200);
+    font-weight: 800;
 }
 
 .headerTab .contentTab div{
